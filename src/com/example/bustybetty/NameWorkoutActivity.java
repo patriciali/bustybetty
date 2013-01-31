@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class PreActivity extends Activity {
+public class NameWorkoutActivity extends Activity {
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +26,12 @@ public class PreActivity extends Activity {
 				
 				// entered text must not be empty
 				if(entered == null || entered.equals("")) {
-					Toast.makeText(PreActivity.this, "please enter a workout name", Toast.LENGTH_SHORT).show();
+					Toast.makeText(NameWorkoutActivity.this, "please enter a workout name", Toast.LENGTH_SHORT).show();
 					return;
 				}
 				
 				Context c = v.getContext();
-				Intent i = new Intent(c, MainActivity.class);
+				Intent i = new Intent(c, SelectActivity.class);
 				i.putExtra("workoutName", entered);
 				c.startActivity(i);
 			}

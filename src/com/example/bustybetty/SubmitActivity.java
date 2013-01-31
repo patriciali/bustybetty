@@ -78,7 +78,7 @@ public class SubmitActivity extends Activity {
 								alertDialog.cancel();
 								
 								Context c = v.getContext();
-								Intent i = new Intent(c, PreActivity.class);
+								Intent i = new Intent(c, NameWorkoutActivity.class);
 								c.startActivity(i);
 								
 						        Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();

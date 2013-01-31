@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class SelectActivity extends Activity {
 	
 //	private static Toast sAddress;
 	public TreeSet<String> mPresent = new TreeSet<String>();
@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         
         final GridView gridview = (GridView) findViewById(R.id.gridview);
-        gridview.setAdapter(new ImageAdapter(this));
+        gridview.setAdapter(new FacebookAdapter(this));
         gridview.setOnItemClickListener(new OnItemClickListener() {
         	@Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
 //        		}
 //        		sAddress.show();
                 
-        		((ImageAdapter) gridview.getAdapter()).toggle(position);
+        		((FacebookAdapter) gridview.getAdapter()).toggle(position);
                 if(mPresent.contains(name)) {
                 	mPresent.remove(name);
                 	v.setBackgroundColor(0xffffffff);
@@ -76,7 +76,7 @@ public class MainActivity extends Activity {
 //					}
 //					sAddress.show();
 //					return;
-					Toast.makeText(MainActivity.this, error, Toast.LENGTH_SHORT).show();
+					Toast.makeText(SelectActivity.this, error, Toast.LENGTH_SHORT).show();
 					return;
 				}
 				

@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
  
-public class ImageAdapter extends BaseAdapter {
+public class FacebookAdapter extends BaseAdapter {
     private Context mContext;
     private HashSet<Integer> mPositions = new HashSet<Integer>();
  
@@ -30,7 +30,7 @@ public class ImageAdapter extends BaseAdapter {
     };
  
     // Constructor
-    public ImageAdapter(Context c){
+    public FacebookAdapter(Context c){
         mContext = c;
     }
     
