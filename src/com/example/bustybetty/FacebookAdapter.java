@@ -3,11 +3,13 @@ package com.example.bustybetty;
 import java.util.HashSet;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class FacebookAdapter extends BaseAdapter {
     private final Context mContext;
@@ -46,23 +48,29 @@ public class FacebookAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView imageView = new ImageView(mContext);
+        View view = View.inflate(mContext, R.layout.gridview_item, null);
+        LinearLayout layout = (LinearLayout) view.findViewById(R.id.item_layout);
+        layout.setPadding(8, 8, 8, 5);
 
+        ImageView imageview = (ImageView) layout.findViewById(R.id.item_image);
         // janky as hell. don't give a FUK
         int width = mContext.getResources().getDisplayMetrics().widthPixels;
-        //int height = mContext.getResources().getDisplayMetrics().heightPixels;
-        int colWidth = (width-20)/3;
-        imageView.setLayoutParams(new GridView.LayoutParams(colWidth, colWidth));
+        int colWidth = (width - 20) / 3;
+        imageview.setLayoutParams(new LinearLayout.LayoutParams(colWidth-16, colWidth-16));
+        imageview.setImageResource(Constants.PICS[position]);
+        //imageview.setPadding(8, 8, 8, 8);
+        imageview.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
 
-        imageView.setImageResource(mThumbIds[position]);
-        imageView.setPadding(8, 8, 8, 8);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+        TextView textview = (TextView) layout.findViewById(R.id.item_text);       
+        textview.setText(Constants.NAMES[position]);
+        textview.setGravity(Gravity.CENTER);
 
         if(mPositions.contains(position)) {
-            imageView.setBackgroundColor(0xff00ff00);
+            view.setBackgroundColor(0xff00ff00);
         } else {
-            imageView.setBackgroundColor(0xffffffff);
+            view.setBackgroundColor(0xffffffff);
         }
-        return imageView;
+
+        return view;
     }
 }
