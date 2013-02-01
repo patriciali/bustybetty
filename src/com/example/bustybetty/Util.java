@@ -19,10 +19,10 @@ import android.net.NetworkInfo;
 import android.util.Log;
 
 public class Util {
-	
-	private static final String HTTP_TAG = "SUCK_MY_HUGE_DICK";
-	protected static final String mURL = "https://docs.google.com/spreadsheet/formResponse?hl=en_US&formkey=dEQ0RFhPVU5FNEk0Z3V3aV9DVm1lSkE6MQ";
-	
+
+    private static final String HTTP_TAG = "SUCK_MY_HUGE_DICK";
+    protected static final String mURL = Constants.FORM_URL;
+
     protected static String submit(String workoutName, String names) {
         HttpClient client = new DefaultHttpClient();
         HttpPost post = new HttpPost(mURL);
@@ -41,12 +41,12 @@ public class Util {
         try {
             HttpResponse response = client.execute(post); // this is where jellybean fucks up
             String responsestr = EntityUtils.toString(response.getEntity());
-        	if(responsestr.contains("Your response has been recorded.")) {
-        		return "successfully submitted";
-        	} else {
-        		return "something's fucked, talk to pmoney";
-        	}
-            
+            if(responsestr.contains("Your response has been recorded.")) {
+                return "successfully submitted";
+            } else {
+                return "something's fucked, talk to pmoney";
+            }
+
         } catch (ClientProtocolException e) {
             // Auto-generated catch block
             Log.e(HTTP_TAG, "client protocol exception", e);
@@ -57,18 +57,18 @@ public class Util {
             return "ioexception. do you have signal?";
         }
     }
-    
-	protected static boolean checkConnection(Context c) {
-		ConnectivityManager cm = (ConnectivityManager) c.getSystemService(Context.CONNECTIVITY_SERVICE);
-		NetworkInfo netInfo = cm.getActiveNetworkInfo();
-		if (netInfo != null && netInfo.isConnected()) {
-			return true;
-		}
-		NetworkInfo mWifi = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-		if (mWifi != null && mWifi.isConnected()) {
-		    return true;
-		}
-		return false;
-	}
+
+    protected static boolean checkConnection(Context c) {
+        ConnectivityManager cm = (ConnectivityManager) c.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        if (netInfo != null && netInfo.isConnected()) {
+            return true;
+        }
+        NetworkInfo mWifi = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        if (mWifi != null && mWifi.isConnected()) {
+            return true;
+        }
+        return false;
+    }
 
 }

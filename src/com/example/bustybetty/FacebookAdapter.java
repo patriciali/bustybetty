@@ -14,11 +14,7 @@ public class FacebookAdapter extends BaseAdapter {
     private final HashSet<Integer> mPositions = new HashSet<Integer>();
 
     // Keep all Images in array
-    public Integer[] mThumbIds = { R.drawable.abby, R.drawable.alex, R.drawable.alina, R.drawable.becky,
-            R.drawable.cami, R.drawable.carolyn, R.drawable.charlotte, R.drawable.evie, R.drawable.fpack,
-            R.drawable.heather, R.drawable.kathleen, R.drawable.kelly, R.drawable.kristen, R.drawable.lily,
-            R.drawable.lisa, R.drawable.liz, R.drawable.maggie, R.drawable.meaghan, R.drawable.michelle,
-            R.drawable.monica, R.drawable.neerja, R.drawable.patricia, R.drawable.sluts };
+    public Integer[] mThumbIds = Constants.PICS;
 
     // Constructor
     public FacebookAdapter(Context c){

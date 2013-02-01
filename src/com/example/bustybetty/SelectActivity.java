@@ -31,7 +31,7 @@ public class SelectActivity extends Activity {
         gridview.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                String name = Constants.mNames[position];
+                String name = Constants.NAMES[position];
 
                 //        		if(sAddress == null) {
                 //        			sAddress = Toast.makeText(MainActivity.this, "" + name, Toast.LENGTH_SHORT);
