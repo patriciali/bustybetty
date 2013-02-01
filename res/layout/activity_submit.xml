@@ -4,61 +4,61 @@
     android:layout_height="match_parent" >
 
     <TextView
-        android:id="@+id/youveselected"
+        android:id="@+id/submit_haveselected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:text="@string/uveselected"
+        android:text="@string/haveselected"
         android:textAppearance="?android:attr/textAppearanceLarge" />
     
     <TextView
-        android:id="@+id/workoutlabel"
+        android:id="@+id/submit_workout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/youveselected"
-        android:layout_below="@+id/youveselected"
+        android:layout_alignLeft="@+id/submit_haveselected"
+        android:layout_below="@+id/submit_haveselected"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
         android:text="@string/workout"
         android:textAppearance="?android:attr/textAppearanceLarge" />
     
     <TextView
-        android:id="@+id/workouttext"
+        android:id="@+id/submit_workout_entered"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/workoutlabel"
-        android:layout_below="@+id/workoutlabel"
+        android:layout_alignLeft="@+id/submit_workout"
+        android:layout_below="@+id/submit_workout"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="15dp"
         android:text="@string/temp2"
         android:textAppearance="?android:attr/textAppearanceSmall" />
     
     <TextView
-        android:id="@+id/nameslabel"
+        android:id="@+id/submit_names"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/workoutlabel"
-        android:layout_below="@+id/workouttext"
+        android:layout_alignLeft="@+id/submit_workout"
+        android:layout_below="@+id/submit_workout_entered"
         android:layout_marginTop="30dp"
         android:text="@string/pplpresent"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/namestext"
+        android:id="@+id/submit_names_selected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/workouttext"
-        android:layout_below="@+id/nameslabel"
+        android:layout_alignLeft="@+id/submit_workout_entered"
+        android:layout_below="@+id/submit_names"
         android:layout_marginTop="15dp"
         android:layout_marginRight="10dp"
         android:text="@string/temp1"
         android:textAppearance="?android:attr/textAppearanceSmall" />
     
     <Button
-        android:id="@+id/actualsubmitbutton"
+        android:id="@+id/submit_submit"
         android:layout_width="fill_parent"
         android:layout_height="45dp"
         android:layout_alignParentBottom="true"

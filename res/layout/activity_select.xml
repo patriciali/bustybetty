@@ -20,7 +20,7 @@
     android:layout_height="wrap_content" >
 
 <GridView 
-	android:id="@+id/gridview"
+	android:id="@+id/select_gridview"
 	android:background="@color/white"
 	android:scrollingCache="false"
     android:layout_width="fill_parent" 
@@ -35,7 +35,7 @@
 />
 
 <Button
-    android:id="@+id/submitbutton"
+    android:id="@+id/select_next"
     android:layout_width="fill_parent"
     android:layout_height="45dp"
     android:layout_alignParentBottom="true"

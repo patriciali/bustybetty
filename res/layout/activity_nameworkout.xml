@@ -4,7 +4,7 @@
     android:layout_height="fill_parent" >
     
 	<TextView
-         android:id="@+id/workouttextview"
+         android:id="@+id/saoiasod"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_marginTop="10dp"
@@ -14,24 +14,24 @@
          android:textAppearance="?android:attr/textAppearanceLarge" />
 
      <EditText
-         android:id="@+id/workouttextedit"
+         android:id="@+id/nameworkout_workout"
          android:layout_width="fill_parent"
          android:layout_height="wrap_content"
          android:layout_marginRight="10dp"
-         android:layout_alignBaseline="@+id/workouttextview"
-         android:layout_alignBottom="@+id/workouttextview"
-         android:layout_toRightOf="@+id/workouttextview"
+         android:layout_alignBaseline="@+id/saoiasod"
+         android:layout_alignBottom="@+id/saoiasod"
+         android:layout_toRightOf="@+id/saoiasod"
          android:ems="10"
          android:hint="@string/hint" >
 
      </EditText>
 
      <Button
-         android:id="@+id/nextbutton"
+         android:id="@+id/nameworkout_next"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_alignParentRight="true"
-         android:layout_below="@+id/workouttextedit"
+         android:layout_below="@+id/nameworkout_workout"
          android:layout_marginRight="18dp"
          android:layout_marginTop="14dp"
          android:text="@string/next" />
