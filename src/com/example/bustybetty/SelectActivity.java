@@ -44,10 +44,10 @@ public class SelectActivity extends Activity {
                 ((FacebookAdapter) gridview.getAdapter()).toggle(position);
                 if(mPresent.contains(name)) {
                     mPresent.remove(name);
-                    v.setBackgroundColor(0xffffffff);
+                    v.setBackgroundColor(v.getContext().getResources().getColor(R.color.white));
                 } else {
                     mPresent.add(name);
-                    v.setBackgroundColor(0xff00ff00);
+                    v.setBackgroundColor(v.getContext().getResources().getColor(R.color.green));
                 }
             }
         });

@@ -66,9 +66,9 @@ public class FacebookAdapter extends BaseAdapter {
         textview.setGravity(Gravity.CENTER);
 
         if(mPositions.contains(position)) {
-            view.setBackgroundColor(0xff00ff00);
+            view.setBackgroundColor(mContext.getResources().getColor(R.color.green));
         } else {
-            view.setBackgroundColor(0xffffffff);
+            view.setBackgroundColor(mContext.getResources().getColor(R.color.white));
         }
 
         return view;
